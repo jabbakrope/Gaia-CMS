@@ -1,4 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
-
-#{welcome /}
+Select block :
+#{select 'block.type', value:1, id:'selectblock'}
+#{blocks.types}
+	#{option block.getName()}${block.getSimpleName()}#{/option}
+#{/blocks.types}
+#{/select}
